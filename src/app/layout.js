@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { Notifications } from '@mantine/notifications';
 import '@mantine/core/styles.css';
@@ -6,7 +6,7 @@ import '@mantine/notifications/styles.css';
 import '@mantine/dates/styles.css';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Dr. Kristian Høy, PhD - Klinisk lektor, Ortopædkirurgi',
@@ -19,11 +19,11 @@ export default function RootLayout({ children }) {
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <MantineProvider
           theme={{
             primaryColor: 'blue',
-            fontFamily: inter.style.fontFamily,
+            fontFamily: montserrat.style.fontFamily,
           }}
           defaultColorScheme="light"
         >

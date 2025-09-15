@@ -9,7 +9,7 @@ export default function Insurance() {
           Speciallægeerklæringer
         </Title>
         <Text size="lg" ta="center" c="dimmed" mb={50} maw={800} mx="auto">
-          Professionelle og objektive lægelige vurderinger til forsikringssager, personskader og retssager. 
+          Professionelle og objektive lægelige vurderinger til forsikringssager, arbejdsskadessager, retssager, private second opinion. 
           Som speciallæge i ortopædisk kirurgi leverer jeg grundige og videnskabeligt funderede erklæringer.
         </Text>
 
@@ -25,10 +25,10 @@ export default function Insurance() {
                 </Group>
                 <Text size="sm" c="dimmed">
                   En speciallægeerklæring er en uvildig, sagkyndig udtalelse fra en specialist 
-                  om en patients helbredstilstand og eventuelle følger af skader eller sygdom.
+                  om en patients helbredstilstand og eventuelle følger efter skader eller sygdom.
                 </Text>
                 <List spacing="xs" size="sm">
-                  <ListItem>Objektiv medicinsk vurdering</ListItem>
+                  <ListItem>Objektiv medicinsk og kirurgisk vurdering</ListItem>
                   <ListItem>Baseret på klinisk undersøgelse</ListItem>
                   <ListItem>Dokumentation af skadesfølger</ListItem>
                   <ListItem>Vurdering af funktionsnedsættelse</ListItem>
@@ -48,7 +48,7 @@ export default function Insurance() {
                 </Group>
                 <Text size="sm" c="dimmed">
                   Speciallægeerklæringer bruges som bevismateriale i juridiske sammenhænge 
-                  og har stor betydning for sagens udfald.
+                  og kan have stor betydning for sagens udfald.
                 </Text>
                 <List spacing="xs" size="sm">
                   <ListItem>Retssager om personskade</ListItem>
@@ -77,8 +77,8 @@ export default function Insurance() {
                   <ListItem>Gennemgang af journalmateriale</ListItem>
                   <ListItem>Klinisk undersøgelse</ListItem>
                   <ListItem>Billediagnostik vurdering</ListItem>
-                  <ListItem>Udarbejdelse af rapport</ListItem>
-                  <ListItem>Levering inden 2-3 uger</ListItem>
+                  <ListItem>Udarbejdelse af erklæring</ListItem>
+                  <ListItem>Levering inden 3-4 uger</ListItem>
                 </List>
               </Stack>
             </Card>
@@ -102,8 +102,7 @@ export default function Insurance() {
                   <Group gap="xs" align="flex-start">
                     <Badge size="xs" variant="light" color="blue">Ret 1</Badge>
                     <Text size="sm">
-                      <strong>Indflydelse på valg af speciallæge:</strong> Du har ret til at blive 
-                      inddraget i valget af hvilken speciallæge der skal udarbejde erklæringen.
+                      <strong>Indflydelse på valg af speciallæge:</strong> Du har ret til selv at vælge, hvilken speciallæge, der skal udarbejde erklæringen.
                     </Text>
                   </Group>
                   <Group gap="xs" align="flex-start">
@@ -147,20 +146,19 @@ export default function Insurance() {
                   <Group gap="xs" align="flex-start">
                     <Badge size="xs" variant="light" color="green">Forsikring</Badge>
                     <Text size="sm">
-                      Forsikringsselskaber bestiller erklæringer til brug for skadesvurdering.
+                      Forsikringsselskaber bestiller og betaler for erklæringen til brug for skadesvurdering.
                     </Text>
                   </Group>
                   <Group gap="xs" align="flex-start">
                     <Badge size="xs" variant="light" color="orange">Myndighed</Badge>
                     <Text size="sm">
                       Offentlige myndigheder kan bestille erklæringer i arbejdsskadessager.
+                    </Text>                    <Badge size="xs" variant="light" color="red">Privat</Badge>
+                    <Text size="sm">
+                     Ønsker du en vurdering eller second opinion vedrørende eventuelle behandlingsmuligheder, betaler du selv for vurdering.
                     </Text>
                   </Group>
                 </Stack>
-                <Divider my="sm" />
-                <Text size="xs" c="dimmed" style={{ fontStyle: 'italic' }}>
-                  Som skadelidt betaler du normalt ikke selv for speciallægeerklæringen.
-                </Text>
               </Stack>
             </Card>
           </GridCol>
@@ -181,7 +179,7 @@ export default function Insurance() {
                   objektiv vurdering. Her er hvad du kan forvente:
                 </Text>
                 <List spacing="xs" size="sm">
-                  <ListItem><strong>Varighed:</strong> 90 minutter</ListItem>
+                  <ListItem><strong>Varighed:</strong> Afhængig af sagens omfang</ListItem>
                   <ListItem><strong>Bisidder:</strong> Du er velkommen til at medbringe en bisidder</ListItem>
                   <ListItem><strong>Legitimation:</strong> Medbring gyldig legitimation</ListItem>
                   <ListItem><strong>Spørgeskema:</strong> Udfyld og medbring det tilsendte spørgeskema</ListItem>
@@ -196,6 +194,7 @@ export default function Insurance() {
                   <ListItem>Skader og gener du oplever</ListItem>
                   <ListItem>Symptomer og funktionsbegrænsninger</ListItem>
                   <ListItem>Lægelig undersøgelse</ListItem>
+                  <ListItem>Vurdering af billedemateriale såfremt dette medbringes</ListItem>
                 </List>
                 <Text size="xs" c="dimmed" mt="md" style={{ fontStyle: 'italic' }}>
                   Formålet er at give en objektiv og grundig vurdering af din tilstand.
@@ -216,7 +215,7 @@ export default function Insurance() {
             <Grid>
               <GridCol span={{ base: 12, md: 8 }}>
                 <Text size="sm" c="dimmed" mb="md">
-                  Som speciallæge i ortopædisk kirurgi med over 25 års erfaring leverer jeg 
+                  Som speciallæge i ortopædisk kirurgi med over 29 års erfaring leverer jeg 
                   objektive og grundige speciallægeerklæringer baseret på:
                 </Text>
                 <Grid>
@@ -239,9 +238,12 @@ export default function Insurance() {
               <GridCol span={{ base: 12, md: 4 }}>
                 <Stack gap="xs">
                   <Badge variant="light" color="blue" size="sm">PhD i Ortopædi</Badge>
-                  <Badge variant="light" color="green" size="sm">25+ års erfaring</Badge>
+                  <Badge variant="light" color="green" size="sm">29+ års erfaring</Badge>
                   <Badge variant="light" color="orange" size="sm">Klinisk lektor</Badge>
-                  <Badge variant="light" color="red" size="sm">Overlæge status</Badge>
+                  <Badge variant="light" color="red" size="sm">Overlæge</Badge>
+                  <Badge variant="light" color="cyan" size="sm" mt={10}>Deltager i den vestdanske døgndækket </Badge>
+                  <Badge variant="light" color="cyan" size="sm"> rygvagtsordning siden 1997</Badge>
+
                 </Stack>
               </GridCol>
             </Grid>

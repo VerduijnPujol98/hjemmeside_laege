@@ -7,14 +7,31 @@ export default function About() {
       <Grid gutter="xl" align="center">
         <GridCol span={{ base: 12, md: 6 }}>
           <Stack gap="xl">
-            <Title order={2} size="2.5rem">
-              Om Kristian Høy, PhD
+            <Title order={2} size="2.5rem" fw={700}>
+              Om Kristian Høy Overlæge, PhD, {<br></br>} Klinisk lektor
             </Title>
+            <Badge 
+              component="a"
+              href="https://cvupload.au.dk/uploads/AU1716/finalnewfullcv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="blue"
+              padding="xl"
+              width={100}
+              size="xl"
+              style={{ cursor: 'pointer' }}
+              variant="gradient"
+              gradient={{ from: 'blue', to: 'cyan', deg: 90 }}
+            >
+              <Text pl={30} pr={30} fw={500}>
+                CV
+              </Text>
+            </Badge>
             <Text size="lg" c="dimmed">
-              Med over 35 års erfaring inden for ortopædkirurgi er Kristian Høy en anerkendt specialist 
-              og forsker. Som Klinisk lektor ved Institut for Klinisk Medicin - Ortopædkirurgi 
+              Med over 37 års erfaring inden for ortopædkirurgi er Kristian Høy en anerkendt specialist 
+              og forsker. Som klinisk lektor ved Institut for Klinisk Medicin - Ortopædkirurgi 
               kombinerer han klinisk ekspertise med akademisk forskning og undervisning. 
-              Kristian Høy har været konsulent og overlæge på Ortopædkirurgisk Afdeling, 
+              Kristian Høy har været overlæge på Ortopædkirurgisk Afdeling, 
               Aarhus Universitetshospital siden 1999.
             </Text>
             
@@ -25,21 +42,25 @@ export default function About() {
                 size="sm"
                 icon={<IconCheck size={16} color="green" />}
               >
-                <ListItem>2018 - PhD, Aarhus Universitet, Danmark</ListItem>
-                <ListItem>1999 - Konsulent, Overlæge, Ortopædkirurgisk Afdeling, Aarhus Universitetshospital (AUH)</ListItem>
+                <ListItem>1988 - Cand. Med. , Læge, Sundhed</ListItem>
                 <ListItem>1997 - Specialist i Ortopædisk Kirurgi (Sundhedsstyrelsen, SST)</ListItem>
-                <ListItem>1988 - Cand Med, Læge, Sundhed</ListItem>
+                <ListItem>1999 - Konsulent, Overlæge, Ortopædkirurgisk Afdeling, Aarhus Universitetshospital (AUH)</ListItem>
+                <ListItem>2011 - Klinisk Lektor, Aarhus Universitet (AU)</ListItem>
+                <ListItem>2018 - PhD, Aarhus Universitet, Danmark</ListItem>      
               </List>
             </Stack>
 
             <Stack gap="md">
               <Group gap="sm">
                 <Badge size="md" variant="light" color="blue">Knogler</Badge>
-                <Badge size="md" variant="light" color="green">Muskler</Badge>
-                <Badge size="md" variant="light" color="orange">Ledcolumna</Badge>
-                <Badge size="md" variant="light" color="purple">Medulla spinalis</Badge>
-                <Badge size="md" variant="light" color="red">Hjerne- og nervesystem</Badge>
-                <Badge size="md" variant="light" color="teal">Rygkirurgi</Badge>
+                <Badge size="md" variant="light" color="green">Slidgigt</Badge>
+                <Badge size="md" variant="light" color="orange">Columna</Badge>
+                <Badge size="md" variant="light" color="purple">Rygmarv</Badge>
+                <Badge size="md" variant="light" color="teal">Nerver</Badge>
+                <Badge size="md" variant="light" color="red">Rygsmerter</Badge>
+                <Badge size="md" variant="light" color="cyan">Rygkirurgi</Badge>
+
+
               </Group>
             </Stack>
           </Stack>

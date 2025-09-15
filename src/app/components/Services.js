@@ -1,4 +1,4 @@
-import { Container, Title, Text, Grid, GridCol, Card, Stack, ThemeIcon } from '@mantine/core';
+import { Container, Title, Text, Grid, GridCol, Card, Stack, ThemeIcon, Badge, Group } from '@mantine/core';
 import { 
   IconBone, 
   IconActivity, 
@@ -49,8 +49,65 @@ export default function Services() {
           Fagområder
         </Title>
         <Text size="lg" ta="center" maw={600} c="dimmed">
-          Specialiseret ortopædkirurgi med fokus på ryg-, nakke- og skoliosebehandling
+          Speciallæge i almen ortopædkirurgi (knæ, hofte, skulder, fod, albue, hånd, finger og traume), højt specialiseret 
+          funktion i vurdering og behandling af nakke- og ryg problematikker(skoliose, diskusprolaps, knoglebrud i rygsøjlen, og 
+          komplekse ryglidelser såsom infektionstilstand og tumores). 
         </Text>
+        
+        <Text size="md" ta="center" fw={600} mb="md">
+          Forskningspublikationer:
+        </Text>
+        
+        <Group justify="center" gap="sm">
+          <Badge 
+            component="a"
+            href="https://ugeskriftet.dk/videnskab/metastatisk-medullaert-tvaersnitssyndrom-0"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="light"
+            color="blue"
+            size="md"
+            style={{ cursor: 'pointer' }}
+          >
+            Metastatisk medullært tværsnitssyndrom
+          </Badge>
+          <Badge 
+            component="a"
+            href="https://ugeskriftet.dk/videnskab/spondylodiskitis-og-multidisciplinaere-teams"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="light"
+            color="blue"
+            size="md"
+            style={{ cursor: 'pointer' }}
+          >
+            Spondylodiskitis og multidisciplinære teams
+          </Badge>
+          <Badge 
+            component="a"
+            href="https://ugeskriftet.dk/videnskab/cervikal-spondylotisk-myelopati"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="light"
+            color="blue"
+            size="md"
+            style={{ cursor: 'pointer' }}
+          >
+            Cervikal spondylotisk myelopati
+          </Badge>
+          <Badge 
+            component="a"
+            href="https://ugeskriftet.dk/videnskab/kirurgi-oeger-symptomatiske-patienters-livskvalitet-ved-spondylolistese"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="light"
+            color="blue"
+            size="md"
+            style={{ cursor: 'pointer' }}
+          >
+            Kirurgi øger symptomatiske patienters livskvalitet ved spondylolistese
+          </Badge>
+        </Group>
       </Stack>
       
       <Grid gutter="xl">

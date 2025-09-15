@@ -12,8 +12,39 @@ export default function Hero() {
   };
 
   return (
-    <Container size="lg" py={80}>
-      <Grid gutter="xl" align="center" style={{ minHeight: '500px' }}>
+    <div style={{ 
+      position: 'relative',
+      minHeight: '600px',
+      backgroundColor: 'white',
+      overflow: 'hidden'
+    }}>
+      {/* Grid Background */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: '0',
+          backgroundSize: '40px 40px',
+          backgroundImage: `
+            linear-gradient(to right, #f4f4f5 1px, transparent 1px),
+            linear-gradient(to bottom, #f4f4f5 1px, transparent 1px)
+          `,
+          opacity: 0.8
+        }}
+      />
+      
+      {/* Radial gradient overlay for faded effect */}
+      <div 
+        style={{
+          position: 'absolute',
+          inset: '0',
+          background: 'radial-gradient(ellipse at center, transparent 60%, rgba(255, 255, 255, 0.5))',
+          pointerEvents: 'none'
+        }}
+      />
+
+      {/* Content */}
+      <Container size="lg" py={80} style={{ position: 'relative', zIndex: 10 }}>
+        <Grid gutter="xl" align="center" style={{ minHeight: '500px' }}>
         <GridCol span={{ base: 12, md: 6 }}>
           <Stack gap="xl">
             <Title 
@@ -21,6 +52,7 @@ export default function Hero() {
               size="3.5rem" 
               c="dark"
               ta={{ base: 'center', md: 'left' }}
+              fw={900}
             >
               Kristian Høy Overlæge, PhD, Klinisk lektor
             </Title>
@@ -29,7 +61,7 @@ export default function Hero() {
               size="1.8rem" 
               c="blue"
               ta={{ base: 'center', md: 'left' }}
-              fw={400}
+              fw={450}
             >
               Klinisk lektor, Institut for Klinisk Medicin - Ortopædkirurgi
             </Title>
@@ -40,8 +72,7 @@ export default function Hero() {
               maw={600}
             >
               Specialiseret i ortopædisk kirurgi, rygkirurgi, nakke-hals kirurgi og skoliosekirurgi. 
-              Med over 35 års erfaring tilbyder jeg forskningsbaseret behandling og 
-              konsulentvirksomhed på Aarhus Universitetshospital.
+              Med over 37 års erfaring tilbyder jeg udfærdigelse af speciallægeerklæringer samt second opinions.
             </Text>
             <Group justify={{ base: 'center', md: 'flex-start' }}>
               <Button 
@@ -79,5 +110,6 @@ export default function Hero() {
         </GridCol>
       </Grid>
     </Container>
+    </div>
   );
 }

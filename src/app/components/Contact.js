@@ -18,20 +18,15 @@ export default function Contact() {
           <Card shadow="sm" padding="xl" radius="md" withBorder h="100%">
             <Stack gap="xl">
               <Title order={3} size="1.4rem">
-                Praksisoplysninger
+                Kontaktoplysninger
               </Title>
               
               <Stack gap="md">
                 <Group gap="md">
                   <IconMapPin size={20} color="blue" />
                   <div>
-                    <Text fw={500}>Adresse</Text>
-                    <Text size="sm" c="dimmed">
-                      Klinik for Ortopædkirurgi 1<br />
-                      Palle Juul-Jensens Boulevard 165<br />
-                      8200 Aarhus N<br />
-                      Danmark
-                    </Text>
+                    <Text fw={500}>Kontaktperson</Text>
+                    <Text fw={300}> Sekretær Bodil Lauridsen</Text>
                   </div>
                 </Group>
 
@@ -60,7 +55,7 @@ export default function Contact() {
                   <div>
                     <Text fw={500}>Konsultationstider</Text>
                     <Text size="sm" c="dimmed">
-                      Efter kl. 17:00
+                      Efter kl. 15:30
                     </Text>
                   </div>
                 </Group>
@@ -68,21 +63,10 @@ export default function Contact() {
 
               <Stack gap="md">
                 <Title order={4} size="1rem" c="dark">
-                  Sådan finder du os
-                </Title>
-                <Text size="sm" c="dimmed">
-                  Klinikken ligger på Klinik for Ortopædkirurgi 1, ved indgang J, 
-                  på Palle Juul-Jensens Boulevard 165 i Aarhus N. Der er god 
-                  parkeringsmuligheder i området, og offentlig transport er let tilgængelig.
-                </Text>
-              </Stack>
-
-              <Stack gap="md">
-                <Title order={4} size="1rem" c="dark">
                   Vigtige oplysninger
                 </Title>
                 <Text size="sm" c="dimmed">
-                  • Husk at medbringe henvisning og sygesikringsbevis<br />
+                  • Husk at medbringe legitimation<br />
                   • Kom venligst 15 minutter før din aftale<br />
                   • Ved afbud, ring venligst mindst 24 timer i forvejen<br />
                   • Du er velkommen til at medbringe en pårørende
