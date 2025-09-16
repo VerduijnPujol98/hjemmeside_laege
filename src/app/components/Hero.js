@@ -71,7 +71,7 @@ export default function Hero() {
               ta={{ base: 'center', md: 'left' }}
               maw={600}
             >
-              Specialiseret i ortopædisk kirurgi, rygkirurgi, nakke-hals kirurgi og skoliosekirurgi. 
+              Specialiseret i ortopædisk kirurgi, højt specialiseret i rygkirurgi, nakke-hals kirurgi og skoliosekirurgi. 
               Med over 37 års erfaring tilbyder jeg udfærdigelse af speciallægeerklæringer samt second opinions.
             </Text>
             <Group justify={{ base: 'center', md: 'flex-start' }}>
