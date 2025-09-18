@@ -43,12 +43,12 @@ const services = [
 
 export default function Services() {
   return (
-    <Container size="lg" py={80}>
-      <Stack align="center" gap="xl" mb={60}>
-        <Title order={2} size="2.5rem" ta="center">
+    <Container size="lg" py={{ base: 40, md: 80 }}>
+      <Stack align="center" gap={{ base: 'lg', md: 'xl' }} mb={{ base: 40, md: 60 }}>
+        <Title order={2} size="2.5rem" ta="center" fw={700}>
           Fagområder
         </Title>
-        <Text size="lg" ta="center" maw={600} c="dimmed">
+        <Text size="lg" ta="center" maw={600} c="dimmed" px={{ base: 'md', md: 0 }}>
           Speciallæge i almen ortopædkirurgi (knæ, hofte, skulder, fod, albue, hånd, finger og traume), højt specialiseret 
           funktion i vurdering og behandling af nakke- og ryg problematikker(skoliose, diskusprolaps, knoglebrud i rygsøjlen, og 
           komplekse ryglidelser såsom infektionstilstand og tumores). 
@@ -58,7 +58,7 @@ export default function Services() {
           Forskningspublikationer:
         </Text>
         
-        <Group justify="center" gap="sm">
+        <Group justify="center" gap={{ base: 'xs', md: 'sm' }}>
           <Badge 
             component="a"
             href="https://ugeskriftet.dk/videnskab/metastatisk-medullaert-tvaersnitssyndrom-0"
@@ -110,20 +110,20 @@ export default function Services() {
         </Group>
       </Stack>
       
-      <Grid gutter="xl">
+      <Grid gutter={{ base: 'lg', md: 'xl' }}>
         {services.map((service, index) => {
           const IconComponent = service.icon;
           return (
-            <GridCol key={index} span={{ base: 12, md: 6, lg: 4 }}>
-              <Card shadow="sm" padding="lg" radius="md" withBorder h="100%">
-                <Stack gap="md">
+            <GridCol key={index} span={{ base: 12, sm: 6, md: 6, lg: 4 }}>
+              <Card shadow="sm" padding={{ base: 'md', md: 'lg' }} radius="md" withBorder h="100%">
+                <Stack gap={{ base: 'sm', md: 'md' }}>
                   <ThemeIcon size={60} radius="md" color="blue">
                     <IconComponent size={30} />
                   </ThemeIcon>
                   <Title order={3} size="1.2rem">
                     {service.title}
                   </Title>
-                  <Text c="dimmed" size="sm">
+                  <Text c="dimmed" size="sm" lh={1.5}>
                     {service.description}
                   </Text>
                 </Stack>

@@ -3,11 +3,43 @@ import { IconCreditCard, IconFileText, IconScale, IconClock, IconUserCheck, Icon
 
 export default function Insurance() {
   return (
-    <section id="speciallægeerklæringer" style={{ paddingTop: '80px', backgroundColor: '#f8f9fa' }}>
-      <Container size="lg" py={80}>
-        <Title order={2} size="2.5rem" ta="center" mb={20}>
-          Speciallægeerklæringer
-        </Title>
+    <section id="speciallægeerklæringer" style={{ paddingTop: '80px' }}>
+      <Container 
+        size="lg" 
+        py={80}
+        px={{ base: 'md', sm: 'lg', md: 'xl' }}
+        style={{ backgroundColor: '#f8f9fa' }}
+      >
+        <>
+          <Title 
+            order={2} 
+            size="2.5rem"
+            ta="center" 
+            mb={20}
+            fw={700}
+            hiddenFrom="sm"
+            style={{ 
+              wordBreak: 'break-word',
+              hyphens: 'auto'
+            }}
+          >
+            Speciallæge<br />erklæringer
+          </Title>
+          <Title 
+            order={2} 
+            size="2.5rem"
+            ta="center" 
+            mb={20}
+            fw={700}
+            visibleFrom="sm"
+            style={{ 
+              wordBreak: 'break-word',
+              hyphens: 'auto'
+            }}
+          >
+            Speciallægeerklæringer
+          </Title>
+        </>
         <Text size="lg" ta="center" c="dimmed" mb={50} maw={800} mx="auto">
           Professionelle og objektive lægelige vurderinger til forsikringssager, arbejdsskadessager, retssager, private second opinion. 
           Som speciallæge i ortopædisk kirurgi leverer jeg grundige og videnskabeligt funderede erklæringer.
@@ -19,11 +51,26 @@ export default function Insurance() {
               <Stack gap="md">
                 <Group gap="md">
                   <IconFileText size={24} color="#228be6" />
-                  <Title order={4} size="1.1rem">
+                  <Title 
+                    order={4} 
+                    size={{ base: '0.9rem', sm: '1rem', md: '1.1rem' }}
+                    style={{ 
+                      wordBreak: 'break-word',
+                      hyphens: 'auto',
+                      lineHeight: 1.3
+                    }}
+                  >
                     Hvad er en speciallægeerklæring?
                   </Title>
                 </Group>
-                <Text size="sm" c="dimmed">
+                <Text 
+                  size="sm" 
+                  c="dimmed"
+                  style={{ 
+                    wordBreak: 'break-word',
+                    hyphens: 'auto'
+                  }}
+                >
                   En speciallægeerklæring er en uvildig, sagkyndig udtalelse fra en specialist 
                   om en patients helbredstilstand og eventuelle følger efter skader eller sygdom.
                 </Text>
@@ -46,7 +93,14 @@ export default function Insurance() {
                     Juridisk betydning
                   </Title>
                 </Group>
-                <Text size="sm" c="dimmed">
+                <Text 
+                  size="sm" 
+                  c="dimmed"
+                  style={{ 
+                    wordBreak: 'break-word',
+                    hyphens: 'auto'
+                  }}
+                >
                   Speciallægeerklæringer bruges som bevismateriale i juridiske sammenhænge 
                   og kan have stor betydning for sagens udfald.
                 </Text>
@@ -95,7 +149,15 @@ export default function Insurance() {
                     Dine rettigheder som skadelidt
                   </Title>
                 </Group>
-                <Text size="sm" c="dimmed" mb="md">
+                <Text 
+                  size="sm" 
+                  c="dimmed" 
+                  mb="md"
+                  style={{ 
+                    wordBreak: 'break-word',
+                    hyphens: 'auto'
+                  }}
+                >
                   Som skadelidt har du vigtige rettigheder i forbindelse med speciallægeerklæringer:
                 </Text>
                 <Stack gap="sm">
@@ -208,13 +270,29 @@ export default function Insurance() {
           <Stack gap="md">
             <Group gap="md">
               <IconShield size={24} color="#495057" />
-              <Title order={4} size="1.1rem">
+              <Title 
+                order={4} 
+                size={{ base: '0.9rem', sm: '1rem', md: '1.1rem' }}
+                style={{ 
+                  wordBreak: 'break-word',
+                  hyphens: 'auto',
+                  lineHeight: 1.3
+                }}
+              >
                 Min tilgang til speciallægeerklæringer
               </Title>
             </Group>
             <Grid>
               <GridCol span={{ base: 12, md: 8 }}>
-                <Text size="sm" c="dimmed" mb="md">
+                <Text 
+                  size="sm" 
+                  c="dimmed" 
+                  mb="md"
+                  style={{ 
+                    wordBreak: 'break-word',
+                    hyphens: 'auto'
+                  }}
+                >
                   Som speciallæge i ortopædisk kirurgi med over 29 års erfaring leverer jeg 
                   objektive og grundige speciallægeerklæringer baseret på:
                 </Text>
