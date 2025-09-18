@@ -104,6 +104,7 @@ export default function Hero() {
             style={{
               height: '450px',
               objectFit: 'cover',
+              objectPosition: '85% 10%',
               boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
             }}
           />
