@@ -71,7 +71,7 @@ export default function About() {
           <Box
             h={{ base: 300, md: 400 }}
             style={{
-              backgroundImage: 'url(/photos/about_section_picture.jpg)',
+              backgroundImage: 'url(/photos/about_section_picture.jpg?v=2)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '8px',

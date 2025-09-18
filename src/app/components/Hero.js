@@ -103,7 +103,7 @@ export default function Hero() {
         
         <GridCol span={{ base: 12, md: 6 }}>
           <Image
-            src="/photos/about_picture.jpg"
+            src="/photos/about_picture.jpg?v=2"
             alt="Dr. Kristian Høy, PhD - Klinisk lektor, Ortopædkirurgi"
             radius="12px"
             h={{ base: 300, md: 450 }}
