@@ -171,7 +171,7 @@ export default function Insurance() {
                     <Badge size="xs" variant="light" color="green">Ret 2</Badge>
                     <Text size="sm">
                       <strong>Forslag til specialist:</strong> Du kan selv foreslå en speciallæge, 
-                      hvis du har præferencer eller tidligere erfaring.
+                      hvis du har præferencer eller tidligere erfaring eller hvis du ikke ønsker at anvende dem, som forsikringsselskaberne har foreslået.
                     </Text>
                   </Group>
                   <Group gap="xs" align="flex-start">
@@ -202,7 +202,7 @@ export default function Insurance() {
                   <Group gap="xs" align="flex-start">
                     <Badge size="xs" variant="light" color="blue">Advokat</Badge>
                     <Text size="sm">
-                      Din advokat bestiller og betaler ofte erklæringen som led i retsprocessen.
+                      Din advokat bestiller og betaler for erklæringen som led i sagsbehandlingen.
                     </Text>
                   </Group>
                   <Group gap="xs" align="flex-start">
@@ -217,7 +217,7 @@ export default function Insurance() {
                       Offentlige myndigheder kan bestille erklæringer i arbejdsskadessager.
                     </Text>                    <Badge size="xs" variant="light" color="red">Privat</Badge>
                     <Text size="sm">
-                     Ønsker du en vurdering eller second opinion vedrørende eventuelle behandlingsmuligheder, betaler du selv for vurdering.
+                     Ønsker du en vurdering eller second opinion vedrørende eventuelle behandlingsmuligheder, eller revurdering af konklusionerne fra en tidligere erklæring, skal du selv betaler for vurderingen.
                     </Text>
                   </Group>
                 </Stack>
@@ -252,7 +252,7 @@ export default function Insurance() {
                   Under undersøgelsen vil vi gennemgå følgende områder:
                 </Text>
                 <List spacing="xs" size="sm">
-                  <ListItem>Din ulykke og sagsforløb</ListItem>
+                  <ListItem>Din sag og sagsforløb</ListItem>
                   <ListItem>Skader og gener du oplever</ListItem>
                   <ListItem>Symptomer og funktionsbegrænsninger</ListItem>
                   <ListItem>Lægelig undersøgelse</ListItem>
@@ -316,9 +316,13 @@ export default function Insurance() {
               <GridCol span={{ base: 12, md: 4 }}>
                 <Stack gap="xs">
                   <Badge variant="light" color="blue" size="sm">PhD i Ortopædi</Badge>
-                  <Badge variant="light" color="green" size="sm">29+ års erfaring</Badge>
-                  <Badge variant="light" color="orange" size="sm">Klinisk lektor</Badge>
-                  <Badge variant="light" color="red" size="sm">Overlæge</Badge>
+                  <Badge variant="light" color="yellow" size="sm">5 års erfaring som specialesagkyndig</Badge>
+                  <Badge variant="light" color="yellow" size="sm">i patientforsikring.</Badge>
+                  <Badge variant="light" color="green" size="sm">37+ års erfaring</Badge>
+                  <Group gap="xs" wrap="nowrap">
+                    <Badge variant="light" color="red" size="sm">Overlæge</Badge>
+                    <Badge variant="light" color="orange" size="sm">Klinisk lektor</Badge>
+                  </Group>
                   <Badge variant="light" color="cyan" size="sm" mt={10}>Deltager i den vestdanske døgndækket </Badge>
                   <Badge variant="light" color="cyan" size="sm"> rygvagtsordning siden 1997</Badge>
 

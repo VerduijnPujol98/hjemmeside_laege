@@ -55,7 +55,7 @@ export default function Hero() {
               fw={900}
               lh={1.1}
             >
-              Kristian Høy Overlæge, PhD, Klinisk lektor
+              Kristian Høy Overlæge, Rygkirurg, PhD, Klinisk lektor
             </Title>
             <Title 
               order={2} 

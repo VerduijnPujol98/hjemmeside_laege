@@ -9,7 +9,7 @@ export default function Contact() {
           Kontakt
         </Title>
         <Text size="lg" ta="center" maw={600} c="dimmed" px={{ base: 'md', md: 0 }}>
-          Book din konsultation i dag. Vi er her for at hjælpe dig tilbage til de aktiviteter du elsker.
+          Book din vurdering i dag. Vi er her for at hjælpe dig videre.
         </Text>
       </Stack>
 
@@ -75,12 +75,10 @@ export default function Contact() {
 
               <Stack gap={{ base: 'sm', md: 'md' }}>
                 <Title order={4} size="1rem" c="dark">
-                  Specialer vi behandler
+                  Specialer vi tilbyder vurdering og erklæringer i
                 </Title>
                 <Text size="sm" c="dimmed" lh={1.5}>
                   Ortopædisk kirurgi, rygkirurgi, skoliose, nakke- og halskirurgi. 
-                  Vi tilbyder også speciallægeerklæringer til forsikringssager og 
-                  objektive medicinske vurderinger.
                 </Text>
               </Stack>
             </Stack>

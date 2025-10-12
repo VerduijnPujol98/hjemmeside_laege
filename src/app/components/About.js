@@ -32,10 +32,10 @@ export default function About() {
             </Button>
             <Text size="lg" c="dimmed" ta={{ base: 'center', md: 'left' }} lh={1.6}>
               Med over 37 års erfaring inden for ortopædkirurgi er Kristian Høy en anerkendt specialist 
-              og forsker. Som klinisk lektor ved Institut for Klinisk Medicin - Ortopædkirurgi 
+              og forsker. Som klinisk lektor (Ass. Professor) ved Institut for Klinisk Medicin - Ortopædkirurgi 
               kombinerer han klinisk ekspertise med akademisk forskning og undervisning. 
               Kristian Høy har været overlæge på Ortopædkirurgisk Afdeling, 
-              Aarhus Universitetshospital siden 1999.
+              Aarhus Universitetshospital siden 1999, og ansat som læge siden 1989. 
             </Text>
             
             <Stack gap={{ base: 'sm', md: 'md' }}>
@@ -45,9 +45,9 @@ export default function About() {
                 size="sm"
                 icon={<IconCheck size={16} color="green" />}
               >
-                <ListItem>1988 - Cand. Med. , Læge, Sundhed</ListItem>
+                <ListItem>1988 - Cand. Med. , Læge, Sundhedsstyrelsen, SST</ListItem>
                 <ListItem>1997 - Specialist i Ortopædisk Kirurgi (Sundhedsstyrelsen, SST)</ListItem>
-                <ListItem>1999 - Konsulent, Overlæge, Ortopædkirurgisk Afdeling, Aarhus Universitetshospital (AUH)</ListItem>
+                <ListItem>1999 - Overlæge, Ortopædkirurgisk Afdeling, Aarhus Universitetshospital</ListItem>
                 <ListItem>2011 - Klinisk Lektor, Aarhus Universitet (AU)</ListItem>
                 <ListItem>2018 - PhD, Aarhus Universitet, Danmark</ListItem>      
               </List>

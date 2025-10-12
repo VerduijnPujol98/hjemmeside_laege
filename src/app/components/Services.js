@@ -12,32 +12,32 @@ const services = [
   {
     icon: IconBone,
     title: "Ortopædisk kirurgi",
-    description: "Omfattende ortopædisk behandling af knogler, led og bevægeapparatet med fokus på funktionsgenoprettelse."
+    description: "Omfatter behandling af knogler, led og bevægeapparatet med fokus på funktionsgenoprettelse."
   },
   {
     icon: IconActivity,
     title: "Ryg kirurgi",
-    description: "Specialiseret rygkirurgi for behandling af rygmarvsskader, diskusprolaps og komplekse ryglidelser."
+    description: "Specialiseret i rygkirurgi, rygmarvsforsnæring, slidgigt, brud på rygsøjlen, diskusprolaps og komplekse ryglidelser såsom skoliose og kræft i rygsøjlen."
   },
   {
     icon: IconHeart,
     title: "Nakke Hals Kirurgi",
-    description: "Avanceret kirurgisk behandling af nakke- og halsområdet, herunder cervikale rygproblemer."
+    description: "Avanceret kirurgisk behandling af nakke- og halsområdet, herunder cervikale rygproblemer. Første og hidtig enste medlem af Cervical Spine research Society, CSRS"
   },
   {
     icon: IconUserCheck,
     title: "Skoliose Kirurgi",
-    description: "Specialiseret kirurgisk korrektion af skoliose og andre rygdeformiteter hos børn og voksne."
+    description: "Specialiseret i kirurgisk korrektion af skoliose og andre rygdeformiteter hos børn og voksne."
   },
   {
     icon: IconStethoscope,
     title: "Akademisk forskning",
-    description: "Forskningsbaseret tilgang til ortopædkirurgi med fokus på innovative behandlingsmetoder."
+    description: "Forskningsbaseret tilgang til ortopædkirurgi med fokus på innovative behandlingsmetoder. Google Scholar H-index 23."
   },
   {
     icon: IconReportMedical,
     title: "Konsulentvirksomhed",
-    description: "Specialist konsultation og second opinion for komplekse ortopædkirurgiske problemstillinger."
+    description: "Specialist konsultation og second opinion for komplekse ortopædkirurgiske og ryg problemstillinger. Specialesagkyndig i patientforsiking gennem 5 år."
   }
 ];
 
@@ -70,6 +70,18 @@ export default function Services() {
             style={{ cursor: 'pointer' }}
           >
             Metastatisk medullært tværsnitssyndrom
+          </Badge>
+<Badge 
+            component="a"
+            href="https://asianspinejournal.org/upload/pdf/asj-2025-0078.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="light"
+            color="blue"
+            size="md"
+            style={{ cursor: 'pointer' }}
+          >
+            unstable metastatic vertebrae
           </Badge>
           <Badge 
             component="a"
