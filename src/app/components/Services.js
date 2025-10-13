@@ -22,7 +22,9 @@ const services = [
   {
     icon: IconHeart,
     title: "Nakke Hals Kirurgi",
-    description: "Avanceret kirurgisk behandling af nakke- og halsområdet, herunder cervikale rygproblemer. Første og hidtig enste medlem af Cervical Spine research Society, CSRS"
+    description: "Avanceret kirurgisk behandling af nakke- og halsområdet, herunder cervikale rygproblemer. Første og hidtil eneste danske medlem af Cervical Spine Research Society, CSRS",
+    linkHref: "https://pure.au.dk/ws/portalfiles/portal/432650758/CSRS-ES_-_Membership_confirmation.pdf",
+    linkText: "Medlemskabsbekræftelse (PDF)"
   },
   {
     icon: IconUserCheck,
@@ -37,7 +39,7 @@ const services = [
   {
     icon: IconReportMedical,
     title: "Konsulentvirksomhed",
-    description: "Specialist konsultation og second opinion for komplekse ortopædkirurgiske og ryg problemstillinger. Specialesagkyndig i patientforsiking gennem 5 år."
+    description: "Specialist konsultation og second opinion for komplekse ortopædkirurgiske og ryg problemstillinger. Tidligere specialesagkyndig i Patientforsikringen gennem 5 år."
   }
 ];
 
@@ -138,6 +140,20 @@ export default function Services() {
                   <Text c="dimmed" size="sm" lh={1.5}>
                     {service.description}
                   </Text>
+                  {service.linkHref && (
+                    <Badge
+                      component="a"
+                      href={service.linkHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="light"
+                      color="blue"
+                      size="sm"
+                      style={{ alignSelf: 'flex-start', cursor: 'pointer' }}
+                    >
+                      {service.linkText || 'Læs mere (PDF)'}
+                    </Badge>
+                  )}
                 </Stack>
               </Card>
             </GridCol>

@@ -214,10 +214,11 @@ export default function Insurance() {
                   <Group gap="xs" align="flex-start">
                     <Badge size="xs" variant="light" color="orange">Myndighed</Badge>
                     <Text size="sm">
-                      Offentlige myndigheder kan bestille erklæringer i arbejdsskadessager.
-                    </Text>                    <Badge size="xs" variant="light" color="red">Privat</Badge>
+                      Offentlige myndigheder kan bestille erklæringer i arbejdsskadessager, og i givet fald betaler den rekvirenten dvs. myndigheden for erklæringen.
+                    </Text>
+                    <Badge size="xs" variant="light" color="red">Privat</Badge>
                     <Text size="sm">
-                     Ønsker du en vurdering eller second opinion vedrørende eventuelle behandlingsmuligheder, eller revurdering af konklusionerne fra en tidligere erklæring, skal du selv betaler for vurderingen.
+                      Ønsker du en vurdering eller second opinion vedrørende eventuelle behandlingsmuligheder, eller revurdering af konklusionerne fra en tidligere erklæring, betaler du selv for vurderingen.
                     </Text>
                   </Group>
                 </Stack>
@@ -315,16 +316,16 @@ export default function Insurance() {
               </GridCol>
               <GridCol span={{ base: 12, md: 4 }}>
                 <Stack gap="xs">
-                  <Badge variant="light" color="blue" size="sm">PhD i Ortopædi</Badge>
+                  <Badge variant="light" color="blue" size="sm">PhD i Ortopædisk Kirurgi</Badge>
                   <Badge variant="light" color="yellow" size="sm">5 års erfaring som specialesagkyndig</Badge>
-                  <Badge variant="light" color="yellow" size="sm">i patientforsikring.</Badge>
-                  <Badge variant="light" color="green" size="sm">37+ års erfaring</Badge>
+                  <Badge variant="light" color="yellow" size="sm">i PatientForsikringen (PF).</Badge>
+                  <Badge variant="light" color="green" size="sm">37+ års erfaring som læge</Badge>
                   <Group gap="xs" wrap="nowrap">
-                    <Badge variant="light" color="red" size="sm">Overlæge</Badge>
-                    <Badge variant="light" color="orange" size="sm">Klinisk lektor</Badge>
+                    <Badge variant="light" color="red" size="sm">Overlæge gennem 27 år</Badge>
+                    <Badge variant="light" color="orange" size="sm">Klinisk lektor (Ass Professor) 15 år.</Badge>
                   </Group>
-                  <Badge variant="light" color="cyan" size="sm" mt={10}>Deltager i den vestdanske døgndækket </Badge>
-                  <Badge variant="light" color="cyan" size="sm"> rygvagtsordning siden 1997</Badge>
+                  <Badge variant="light" color="cyan" size="sm" mt={10}>Vagthavende i det vestdanske døgnberedskab</Badge>
+                  <Badge variant="light" color="cyan" size="sm">for Rygmarvsskadede siden 1997</Badge>
 
                 </Stack>
               </GridCol>

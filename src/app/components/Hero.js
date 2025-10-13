@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <div style={{ 
       position: 'relative',
-      minHeight: '600px',
+      minHeight: '70vh',
       backgroundColor: 'white',
       overflow: 'hidden'
     }}>
@@ -43,17 +43,17 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <Container size="lg" py={{ base: 40, sm: 60, md: 80 }} style={{ position: 'relative', zIndex: 10 }}>
-        <Grid gutter={{ base: 'md', md: 'xl' }} align="flex-start" style={{ minHeight: '500px' }}>
+      <Container size="lg" py={{ base: 56, sm: 72, md: 96 }} style={{ position: 'relative', zIndex: 10 }}>
+        <Grid gutter={{ base: 'lg', md: 'xl' }} align="center" style={{ minHeight: '60vh' }}>
         <GridCol span={{ base: 12, md: 6 }}>
-          <Stack gap={{ base: 'lg', md: 'xl' }}>
+          <Stack gap={{ base: 'xl', md: 40 }}>
             <Title 
               order={1} 
               size="3.5rem"
               c="dark"
               ta={{ base: 'center', md: 'left' }}
               fw={900}
-              lh={1.1}
+              lh={1.2}
             >
               Kristian Høy Overlæge, Rygkirurg, PhD, Klinisk lektor
             </Title>
@@ -63,16 +63,16 @@ export default function Hero() {
               c="blue"
               ta={{ base: 'center', md: 'left' }}
               fw={450}
-              lh={1.3}
+              lh={1.35}
             >
-              Klinisk lektor, Institut for Klinisk Medicin - Ortopædkirurgi
+              Klinisk lektor, Aarhus Universitet
             </Title>
             <Text 
               size="xl"
               c="dimmed"
               ta={{ base: 'center', md: 'left' }}
               maw={600}
-              lh={1.6}
+              lh={1.7}
             >
               Specialiseret i ortopædisk kirurgi, højt specialiseret i rygkirurgi, nakke-hals kirurgi og skoliosekirurgi. 
               Med over 37 års erfaring tilbyder jeg udfærdigelse af speciallægeerklæringer samt second opinions.
@@ -106,7 +106,7 @@ export default function Hero() {
             src="/photos/about_picture.jpg?v=2"
             alt="Dr. Kristian Høy, PhD - Klinisk lektor, Ortopædkirurgi"
             radius="12px"
-            h={{ base: 300, md: 450 }}
+            h={{ base: 320, md: 520 }}
             style={{
               objectFit: 'cover',
               objectPosition: '85% 10%',

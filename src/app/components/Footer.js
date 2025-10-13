@@ -13,10 +13,10 @@ export default function Footer() {
             {/* Doctor Information */}
             <Stack gap="xs" style={{ flex: 1, minWidth: 250 }}>
               <Text size="sm" fw={600} c="dark">
-                Dr. Kristian Høy, PhD
+                Kristian Høy, PhD
               </Text>
               <Text size="xs" c="dimmed">
-                Klinisk lektor, Institut for Klinisk Medicin - Ortopædkirurgi
+                Klinisk lektor, Aarhus Universitet
               </Text>
               <Text size="xs" c="dimmed">
                 Speciallæge i ortopædisk kirurgi
@@ -36,7 +36,7 @@ export default function Footer() {
           {/* Copyright */}
           <Group justify="center">
             <Text size="xs" c="dimmed" ta="center">
-              © {new Date().getFullYear()} Dr. Kristian Høy, PhD. Alle rettigheder forbeholdes.
+              © {new Date().getFullYear()} Kristian Høy, PhD. Alle rettigheder forbeholdes.
             </Text>
           </Group>
         </Stack>

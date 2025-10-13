@@ -1,5 +1,7 @@
-import { Container, Title, Text, Grid, GridCol, Card, Stack, Group, Button, Anchor, TextInput, Textarea } from '@mantine/core';
-import { IconPhone, IconMail, IconMapPin, IconCalendar, IconSend } from '@tabler/icons-react';
+import { Container, Title, Text, Grid, GridCol, Card, Stack, Group, Button, Anchor, TextInput, Textarea, Tooltip, Badge } from '@mantine/core';
+import { IconPhone, IconMail, IconMapPin, IconCalendar, IconSend, IconShieldLock } from '@tabler/icons-react';
+
+const JOTFORM_URL = process.env.NEXT_PUBLIC_JOTFORM_URL || 'https://form.jotform.com/252856789015065';
 
 export default function Contact() {
   return (
@@ -34,8 +36,8 @@ export default function Contact() {
                   <IconPhone size={20} color="blue" />
                   <div>
                     <Text fw={500} size="md">Telefon</Text>
-                    <Anchor href="tel:+1234567890" size="sm">
-                      (123) 456-7890
+                    <Anchor href="tel:+4578454172" size="sm">
+                      +4578454172
                     </Anchor>
                   </div>
                 </Group>
@@ -44,8 +46,8 @@ export default function Contact() {
                   <IconMail size={20} color="blue" />
                   <div>
                     <Text fw={500} size="md">Email</Text>
-                    <Anchor href="mailto:info@doctorname.com" size="sm">
-                      info@doctorname.com
+                    <Anchor href="mailto:bodlaur@gmail.com" size="sm">
+                      bodlaur@gmail.com
                     </Anchor>
                   </div>
                 </Group>
@@ -78,7 +80,7 @@ export default function Contact() {
                   Specialer vi tilbyder vurdering og erklæringer i
                 </Title>
                 <Text size="sm" c="dimmed" lh={1.5}>
-                  Ortopædisk kirurgi, rygkirurgi, skoliose, nakke- og halskirurgi. 
+                  Almen ortopædisk kirurgi (knæ, hofte, skulder, albue, hånd, og traumatologi). Almen rygkirurgi, slidgigt, diskusprolaps, rygmarvsforsnævring. Højt specialiseret rygkirurgi, skoliose, tumor, nakke- og halskirurgi.
                 </Text>
               </Stack>
             </Stack>
@@ -91,6 +93,31 @@ export default function Contact() {
               <Title order={3} size="1.4rem">
                 Kontakt formular
               </Title>
+              
+              {/* Button to send sensitive information via secure JotForm */}
+              <Stack gap="xs">
+                <Group gap="xs" wrap="wrap">
+                  <Button
+                    component="a"
+                    href={JOTFORM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="light"
+                    color="blue"
+                    leftSection={<IconShieldLock size={20} />}
+                  >
+                    Send følsomme oplysninger sikkert
+                  </Button>
+                  <Tooltip label="Formularen sendes via krypteret forbindelse og gemmes i EU (GDPR)." withArrow>
+                    <Badge variant="light" color="green" leftSection={<IconShieldLock size={14} />}>
+                      Krypteret
+                    </Badge>
+                  </Tooltip>
+                </Group>
+                <Text size="xs" c="dimmed">
+                  Åbner en krypteret formular i en ny fane. Undlad at dele detaljerede helbredsoplysninger i formularen herunder.
+                </Text>
+              </Stack>
               
               <Stack gap={{ base: 'sm', md: 'md' }}>
                 <TextInput
