@@ -14,13 +14,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://hjemmeside-laege.ve
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Dr. Kristian Høy, PhD – Klinisk lektor, Ortopædkirurgi',
-    template: '%s | Dr. Kristian Høy',
+    default: 'Kristian Høy, PhD – Klinisk lektor, Ortopædkirurgi',
+    template: '%s | Kristian Høy',
   },
   description:
     'Overlæge og klinisk lektor i ortopædkirurgi. Specialiseret i rygkirurgi, nakke-hals kirurgi, skoliose og speciallægeerklæringer.',
-  applicationName: 'Dr. Kristian Høy – Ortopædkirurgi',
-  authors: [{ name: 'Dr. Kristian Høy' }],
+  applicationName: 'Kristian Høy – Ortopædkirurgi',
+  authors: [{ name: 'Kristian Høy' }],
   keywords: [
     'ortopædkirurgi',
     'ortopæd',
@@ -38,23 +38,23 @@ export const metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    title: 'Dr. Kristian Høy – Ortopædkirurgi',
+    title: 'Kristian Høy – Ortopædkirurgi',
     description:
       'Overlæge og klinisk lektor i ortopædkirurgi. Specialiseret i rygkirurgi, nakke-hals kirurgi, skoliose og speciallægeerklæringer.',
-    siteName: 'Dr. Kristian Høy',
+    siteName: 'Kristian Høy',
     locale: 'da_DK',
     images: [
       {
         url: `${siteUrl}/photos/about_picture.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Dr. Kristian Høy – Ortopædkirurgi',
+        alt: 'Kristian Høy – Ortopædkirurgi',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Kristian Høy – Ortopædkirurgi',
+    title: 'Kristian Høy – Ortopædkirurgi',
     description:
       'Overlæge og klinisk lektor i ortopædkirurgi. Specialiseret i rygkirurgi, nakke-hals kirurgi, skoliose og speciallægeerklæringer.',
     images: [`${siteUrl}/photos/about_picture.jpg`],
@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Physician',
-              name: 'Dr. Kristian Høy',
+              name: 'Kristian Høy',
               description:
                 'Overlæge og klinisk lektor i ortopædkirurgi. Specialiseret i rygkirurgi, nakke-hals kirurgi og skoliose.',
               url: siteUrl,
@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              name: 'Dr. Kristian Høy – Ortopædkirurgi',
+              name: 'Kristian Høy – Ortopædkirurgi',
               url: siteUrl,
               inLanguage: 'da-DK',
             }),
