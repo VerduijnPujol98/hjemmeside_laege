@@ -301,7 +301,7 @@ export default function Insurance() {
                   <GridCol span={{ base: 12, md: 6 }}>
                     <List spacing="xs" size="sm">
                       <ListItem>Grundig klinisk undersøgelse</ListItem>
-                      <ListItem>Analyse af relevant bildediagnostik</ListItem>
+                      <ListItem>Analyse af relevant billede diagnostik</ListItem>
                       <ListItem>Gennemgang af journalmateriale</ListItem>
                     </List>
                   </GridCol>
