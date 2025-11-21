@@ -1,7 +1,8 @@
 import { Container, Title, Text, Grid, GridCol, Card, Stack, Group, Button, Anchor, TextInput, Textarea, Tooltip, Badge } from '@mantine/core';
 import { IconPhone, IconMail, IconMapPin, IconCalendar, IconSend, IconShieldLock } from '@tabler/icons-react';
 
-const JOTFORM_URL = process.env.NEXT_PUBLIC_JOTFORM_URL || 'https://form.jotform.com/252856789015065';
+// Updated encrypted JotForm URL (fallback if NEXT_PUBLIC_JOTFORM_URL is not set)
+const JOTFORM_URL = process.env.NEXT_PUBLIC_JOTFORM_URL || 'https://form.jotform.com/253243700025343';
 
 export default function Contact() {
   return (
