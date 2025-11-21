@@ -1,10 +1,43 @@
-import { Container, Title, Text, Grid, GridCol, Card, Stack, Group, Button, Anchor, TextInput, Textarea, Tooltip, Badge } from '@mantine/core';
+"use client";
+import { useState } from 'react';
+import { Container, Title, Text, Grid, GridCol, Card, Stack, Group, Button, Anchor, TextInput, Textarea, Tooltip, Badge, Alert } from '@mantine/core';
 import { IconPhone, IconMail, IconMapPin, IconCalendar, IconSend, IconShieldLock } from '@tabler/icons-react';
 
-// Updated encrypted JotForm URL (fallback if NEXT_PUBLIC_JOTFORM_URL is not set)
+// Encrypted JotForm URL (sensitive data external secure form)
 const JOTFORM_URL = process.env.NEXT_PUBLIC_JOTFORM_URL || 'https://form.jotform.com/253243700025343';
+// Web3Forms access key (consider moving to env var NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY)
+const WEB3FORMS_ACCESS_KEY = '5eb55e4d-b20b-4941-b7d7-27544428f26a';
 
 export default function Contact() {
+  const [status, setStatus] = useState(null); // { type, message }
+  const [loading, setLoading] = useState(false);
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    setStatus(null);
+    setLoading(true);
+    try {
+      const formData = new FormData(e.target);
+      formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+      if (!formData.get('subject')) {
+        formData.append('subject', 'Ny henvendelse via kontaktformular');
+      }
+      formData.append('from_website', 'www.kristianhoey.dk');
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+      const data = await res.json();
+      if (data.success) {
+        setStatus({ type: 'success', message: 'Tak! Din besked er sendt.' });
+        e.target.reset();
+      } else {
+        setStatus({ type: 'error', message: 'Der opstod en fejl. Prøv igen.' });
+      }
+    } catch (err) {
+      setStatus({ type: 'error', message: 'Netværksfejl. Tjek din forbindelse.' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <Container size="lg" py={{ base: 40, md: 80 }}>
       <Stack align="center" gap={{ base: 'lg', md: 'xl' }} mb={{ base: 40, md: 60 }}>
@@ -90,93 +123,50 @@ export default function Contact() {
 
         <GridCol span={{ base: 12, md: 6 }}>
           <Card shadow="sm" padding={{ base: 'lg', md: 'xl' }} radius="md" withBorder h="100%">
-            <Stack gap={{ base: 'lg', md: 'xl' }}>
-              <Title order={3} size="1.4rem">
-                Kontakt formular
-              </Title>
-              
-              {/* Button to send sensitive information via secure JotForm */}
-              <Stack gap="xs">
-                <Group gap="xs" wrap="wrap">
-                  <Button
-                    component="a"
-                    href={JOTFORM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    variant="light"
-                    color="blue"
-                    leftSection={<IconShieldLock size={20} />}
-                  >
-                    Send følsomme oplysninger sikkert
-                  </Button>
-                  <Tooltip label="Formularen sendes via krypteret forbindelse og gemmes i EU (GDPR)." withArrow>
-                    <Badge variant="light" color="green" leftSection={<IconShieldLock size={14} />}>
-                      Krypteret
-                    </Badge>
-                  </Tooltip>
-                </Group>
-                <Text size="xs" c="dimmed">
-                  Åbner en krypteret formular i en ny fane. Undlad at dele detaljerede helbredsoplysninger i formularen herunder.
-                </Text>
+            <form onSubmit={onSubmit}>
+              <Stack gap={{ base: 'lg', md: 'xl' }}>
+                <Title order={3} size="1.4rem">Kontakt formular</Title>
+                <Stack gap="xs">
+                  <Group gap="xs" wrap="wrap">
+                    <Button
+                      component="a"
+                      href={JOTFORM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      variant="light"
+                      color="blue"
+                      leftSection={<IconShieldLock size={20} />}
+                    >
+                      Send følsomme oplysninger sikkert
+                    </Button>
+                    <Tooltip label="Formularen sendes via krypteret forbindelse og gemmes i EU (GDPR)." withArrow>
+                      <Badge variant="light" color="green" leftSection={<IconShieldLock size={14} />}>Krypteret</Badge>
+                    </Tooltip>
+                  </Group>
+                  <Text size="xs" c="dimmed">Åbner en krypteret formular i en ny fane. Undlad at dele detaljerede helbredsoplysninger i formularen herunder.</Text>
+                </Stack>
+                <Stack gap={{ base: 'sm', md: 'md' }}>
+                  <TextInput name="name" label="Navn" placeholder="Dit fulde navn" required size="md" />
+                  <TextInput name="email" label="Email" placeholder="din@email.dk" type="email" required size="md" />
+                  <TextInput name="phone" label="Telefon nummer" placeholder="+45 12 34 56 78" type="tel" size="md" />
+                  <TextInput name="subject" label="Emne" placeholder="Emne for din henvendelse" required size="md" />
+                  <Textarea name="message" label="Besked" placeholder="Beskriv venligst dit ærinde eller dine spørgsmål..." rows={{ base: 3, md: 4 }} required size="md" />
+                </Stack>
+                {status && (
+                  <Alert color={status.type === 'success' ? 'green' : 'red'} title={status.type === 'success' ? 'Sendt' : 'Fejl'}>
+                    {status.message}
+                  </Alert>
+                )}
+                <Stack gap={{ base: 'sm', md: 'md' }}>
+                  <Text size="sm" c="dimmed" ta="center">Vi bestræber os på at svare inden for 24 timer på hverdage.</Text>
+                  <Text size="xs" c="dimmed" ta="center">For akutte henvendelser, ring venligst direkte til klinikken.</Text>
+                </Stack>
+                <Button leftSection={<IconSend size={20} />} size="lg" fullWidth color="blue" type="submit" loading={loading}>
+                  {loading ? 'Sender...' : 'Send besked'}
+                </Button>
+                <input type="hidden" name="redirect" value="https://www.kristianhoey.dk/" />
               </Stack>
-              
-              <Stack gap={{ base: 'sm', md: 'md' }}>
-                <TextInput
-                  label="Navn"
-                  placeholder="Dit fulde navn"
-                  required
-                  size="md"
-                />
-                
-                <TextInput
-                  label="Email"
-                  placeholder="din@email.dk"
-                  type="email"
-                  required
-                  size="md"
-                />
-                
-                <TextInput
-                  label="Telefon nummer"
-                  placeholder="+45 12 34 56 78"
-                  type="tel"
-                  size="md"
-                />
-                
-                <TextInput
-                  label="Emne"
-                  placeholder="Emne for din henvendelse"
-                  required
-                  size="md"
-                />
-                
-                <Textarea
-                  label="Besked"
-                  placeholder="Beskriv venligst dit ærinde eller dine spørgsmål..."
-                  rows={{ base: 3, md: 4 }}
-                  required
-                  size="md"
-                />
-              </Stack>
-
-              <Stack gap={{ base: 'sm', md: 'md' }}>
-                <Text size="sm" c="dimmed" ta="center">
-                  Vi bestræber os på at svare inden for 24 timer på hverdage.
-                </Text>
-                <Text size="xs" c="dimmed" ta="center">
-                  For akutte henvendelser, ring venligst direkte til klinikken.
-                </Text>
-              </Stack>
-
-              <Button
-                leftSection={<IconSend size={20} />}
-                size="lg"
-                fullWidth
-                color="blue"
-              >
-                Send besked
-              </Button>
-            </Stack>
+            </form>
           </Card>
         </GridCol>
       </Grid>
