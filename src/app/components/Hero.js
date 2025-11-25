@@ -65,7 +65,7 @@ export default function Hero() {
               fw={450}
               lh={1.35}
             >
-              Klinisk lektor, Aarhus Universitet
+              Aarhus Universitetshospital, Aarhus Universitet
             </Title>
             <Text 
               size="xl"

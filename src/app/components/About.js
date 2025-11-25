@@ -70,6 +70,7 @@ export default function About() {
                   <ListItem>1999 - Overlæge, Ortopædkirurgisk Afdeling, Aarhus Universitetshospital</ListItem>
                   <ListItem>2011 - Klinisk Lektor, Aarhus Universitet (AU)</ListItem>
                   <ListItem>2018 - PhD, Aarhus Universitet, Danmark</ListItem>
+                  <ListItem>2018 - Kåret som året underviser, Århus Universitet af dimitterenede læger</ListItem>
                   <ListItem>2019 - Ekstern Lektor, Institut for Biomedicin</ListItem>
                   <ListItem>2019 - Tildelt Prisen for Bedste PhD afhandling af Dansk Ortopædisk Selskab (DOS)</ListItem>
                   <ListItem>2020 - Prægraduat Uddannelsesansvarlig klinisk lektor, Ortopædisk afdeling, Aarhus University</ListItem>

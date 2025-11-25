@@ -322,8 +322,8 @@ export default function Insurance() {
                   <Badge variant="light" color="green" size="sm">37+ års erfaring som læge</Badge>
                   <Group gap="xs" wrap="nowrap">
                     <Badge variant="light" color="red" size="sm">Overlæge gennem 27 år</Badge>
-                    <Badge variant="light" color="orange" size="sm">Klinisk lektor (Ass Professor) 15 år.</Badge>
                   </Group>
+                  <Badge variant="light" color="orange" size="sm">Klinisk lektor (Ass Professor) 15 år.</Badge>
                   <Badge variant="light" color="cyan" size="sm" mt={10}>Vagthavende i det vestdanske døgnberedskab</Badge>
                   <Badge variant="light" color="cyan" size="sm">for Rygmarvsskadede siden 1997</Badge>
 
