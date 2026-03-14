@@ -20,7 +20,7 @@ export default function About() {
             <Divider my="md" />
             <Button 
               component="a"
-              href="https://cvupload.au.dk/uploads/AU1716/finalnewfullcv.pdf"
+              href="https://cvupload.au.dk/uploads/AU1716/finalnewfullcv2026.pdf"
               target="_blank"
               rel="noopener noreferrer"
               size="md"
